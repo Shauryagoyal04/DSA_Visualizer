@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #DBD3D3; /* Light neutral background */
+  background-color: #DBD3D3; 
 }
 
 .container {
@@ -19,8 +19,8 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #024CAA; /* Dark blue background */
-  color: #DBD3D3; /* Light text */
+  background-color: #024CAA; 
+  color: #DBD3D3; 
   padding: 1rem 0;
 }
 
@@ -40,21 +40,21 @@ body {
 }
 
 .nav-links a {
-  color: #DBD3D3; /* Light text */
+  color: #DBD3D3; 
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-links a:hover {
-  color: #EC8305; /* Bright orange for hover effect */
+  color: #EC8305; 
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   padding: 4rem 1rem;
-  background: linear-gradient(to right, #007bff, #024CAA); /* Blue gradient */
-  color: #DBD3D3; /* Light text */
+  background: linear-gradient(to right, #007bff, #024CAA); 
+  color: #DBD3D3; 
 }
 
 .hero h1 {
@@ -76,7 +76,7 @@ body {
 }
 
 .card {
-  background-color: #DBD3D3; /* Light neutral background for cards */
+  background-color: #DBD3D3; 
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 1.5rem;
@@ -92,7 +92,7 @@ body {
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #024CAA; /* Blue for card headings */
+  color: #024CAA; 
 }
 
 .card p {
@@ -103,8 +103,8 @@ body {
 .card .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #EC8305; /* Bright orange for buttons */
-  color: #DBD3D3; /* Light text */
+  background-color: #EC8305; 
+  color: #DBD3D3; 
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -112,7 +112,7 @@ body {
 }
 
 .card .btn:hover {
-  background-color: #024CAA; /* Dark blue for hover effect */
+  background-color: #024CAA; 
 }
 
 /* Footer */
@@ -122,8 +122,8 @@ body {
   bottom: 0%;
   text-align: center;
   padding: 1rem;
-  background-color: #024CAA; /* Blue background */
-  color: #DBD3D3; /* Light text */
+  background-color: #024CAA; 
+  color: #DBD3D3; 
 }
 /* Overlay Styles */
 .overlay {
@@ -144,8 +144,6 @@ body {
 .overlay-content {
   
   border-radius: 10px;
-  /* justify-content: center;
-  align-items: center; */
   text-align: center;
 }
 .overlay h2 {
@@ -159,8 +157,8 @@ body {
 }
 
 .btn {
-  background: #024CAA; /* Matching palette */
-  color: #DBD3D3; /* Matching palette */
+  background: #024CAA; 
+  color: #DBD3D3; 
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
@@ -169,9 +167,9 @@ body {
 }
 
 .btn:hover {
-  background: #EC8305; /* Matching palette */
+  background: #EC8305; 
 }
 
 .close-btn {
-  background: #EC8305; /* Close button highlight */
+  background: #EC8305; 
 }

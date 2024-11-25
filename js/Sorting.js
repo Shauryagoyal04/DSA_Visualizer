@@ -15,55 +15,50 @@ const sleep = async (ms) => {
   
   let swaps = []
   
-  const partition = (array, left, right, compareFn) => {
-    const pivot = array[Math.floor((right + left) / 2)]
+  const partition = (array, left, right) => {
+    const pivot = array[left]; // Use the first element as the pivot
+    let i = left;
+    let j = right;
   
-    let i = left
-    let j = right
-  
-    while (i <= j) {
-      while (compareFn(array[i], pivot) === Compare.LESS_THAN) {
-        i++
-      } while (compareFn(array[j], pivot) === Compare.BIGGER_THAN) {
-        j--
+    while (i < j) {
+      
+      while (array[i] <= pivot && i <= right - 1) {
+        i++;
       }
-      if (i <= j) {
-        let temp = array[i]
-        array[i] = array[j]
-        array[j] = temp
-        swaps.push({ firstPostion: i, lastPosition: j })
-        i++
-        j--
+      
+      while (array[j] > pivot && j >= left + 1) {
+        j--;
       }
-    }
-  
-    return i
-  }
-  
-  const quick = (array, left, right, compareFn) => {
-    let index
-  
-    if (array.length > 1) {
-      index = partition(array, left, right, compareFn)
-      if (left < index - 1) {
-        quick(array, left, index - 1, compareFn)
-      }
-      if (index < right) {
-        quick(array, index, right, compareFn)
+      if (i < j) {
+        
+        [array[i], array[j]] = [array[j], array[i]];
+        swaps.push({ firstPostion: i, lastPosition: j });
       }
     }
   
-    return array
-  }
+    
+    [array[left], array[j]] = [array[j], array[left]];
+    swaps.push({ firstPostion: left, lastPosition: j });
+    return j;
+  };
+  
+  
+  const quick = (array, left, right) => {
+    if (left < right) {
+      const index = partition(array, left, right);
+      quick(array, left, index - 1); 
+      quick(array, index + 1, right); 
+    }
+  };
   
   class SortingAlgorithms {
   
     bubbleSort(array) {
       const swaps = []
-      for (let i = 0; i < array.length; i++) {
+      for (let i = array.length-1; i >0; i--) {
   
-        // Last i elements are already in place
-        for (let j = 0; j < array.length - i - 1; j++) {
+        
+        for (let j = 0; j <=i-1; j++) {
   
           // Checking if the item at present iteration is greather than the next iteration
           if (array[j] > array[j + 1]) {
@@ -100,13 +95,13 @@ const sleep = async (ms) => {
       return swaps
     }
   
-    quickSort(array, compareFn = defaultCompare) {
-      swaps = []
-      quick(array, 0, array.length - 1, compareFn)
-      return swaps
+    quickSort(array) {
+      swaps = []; 
+      quick(array, 0, array.length - 1);
+      return swaps; 
     }
   }
-  let nBars = 10
+  let nBars = 20
 
 let numbersBars = document.getElementById('numbersBars')
 
@@ -185,6 +180,9 @@ generateBtn.addEventListener('click', () => {
   stage.style.width = `${nBars * 30}px`
   start()
 })
+solveBtn.addEventListener('click', () => {
+  solve()
+})
 // Overlay functions
 function openOverlay() {
   document.getElementById('merge-sort-overlay').style.display = 'flex';
@@ -194,6 +192,3 @@ function closeOverlay() {
   document.getElementById('merge-sort-overlay').style.display = 'none';
 }
 
-solveBtn.addEventListener('click', () => {
-  solve()
-})

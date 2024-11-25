@@ -170,11 +170,11 @@ body {
     gap: 10px; /* Adds spacing between child elements */
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
-    border-radius: 10px; /* Rounded corners */
-    background-color: #fff; /* Optional background for better visibility */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    width: 200px; /* Fixed width for consistency */
-    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 200px; 
+    margin: 20px auto; 
 }
 
 .generate-new input {
@@ -182,7 +182,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    text-align: center; /* Centers the number inside the input */
+    text-align: center; 
 }
 
 .generate-new button {
@@ -193,11 +193,11 @@ body {
     cursor: pointer;
     background-color: #007bff;
     color: white;
-    transition: background-color 0.3s ease; /* Adds a hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 .generate-new button:hover {
-    background-color: #555; /* Slightly lighter on hover */
+    background-color: #555; 
 }
 
   .buttons {
@@ -221,16 +221,3 @@ body {
     background: #4eb9fb;
   }
   
-/* .array-bar {
-    width: 30px;
-    background-color: #3498db;
-    margin: 0 2px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.highlight {
-    background-color: #e74c3c; Highlighted in red */
-
