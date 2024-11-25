@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Data Structure</title>
+    <link rel="stylesheet" href="css/queue.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>Queue Data Structure</div>
+        <button onclick="openOverlay()">About Queue</button>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar for controls -->
+        <div class="sidebar">
+            <input type="number" id="enqueue-value" placeholder="Enter value" />
+            <button onclick="enqueue()">Enqueue</button>
+            <button onclick="dequeue()">Dequeue</button>
+            <button onclick="peek()">Peek</button>
+            <button onclick="isEmpty()">Is Empty</button>
+        </div>
+
+        <!-- Main content for queue visualization -->
+        <div class="content">
+            <div class="queue-display" id="queue-display">
+                <!-- Queue elements will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for queue information -->
+    <div class="overlay" id="queue-overlay">
+        <h2>About Queue</h2>
+        <p><strong>Definition:</strong> A queue is a linear data structure that follows the First In, First Out (FIFO) principle. The element inserted first is removed first.</p>
+        <p><strong>Operations:</strong></p>
+        <ul>
+            <li><strong>Enqueue:</strong> Adds an element to the rear of the queue.</li>
+            <li><strong>Dequeue:</strong> Removes and returns the front element of the queue.</li>
+            <li><strong>Peek:</strong> Returns the front element without removing it.</li>
+            <li><strong>Is Empty:</strong> Checks if the queue has no elements.</li>
+        </ul>
+        <p><strong>Time Complexity:</strong></p>
+        <ul>
+            <li>Enqueue: O(1)</li>
+            <li>Dequeue: O(1)</li>
+            <li>Peek: O(1)</li>
+            <li>Is Empty: O(1)</li>
+        </ul>
+        <button onclick="closeOverlay()">Close</button>
+    </div>
+
+    <script src="js/queue.js"></script>
+</body>
+</html>

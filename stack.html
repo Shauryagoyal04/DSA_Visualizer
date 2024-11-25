@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Data Structure</title>
+    <link rel="stylesheet" href="css/stack.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>Stack Data Structure</div>
+        <button onclick="openOverlay()">About Stack</button>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar for controls -->
+        <div class="sidebar">
+            <input type="number" id="push-value" placeholder="Enter value" />
+            <button onclick="push()">Push</button>
+            <button onclick="pop()">Pop</button>
+            <button onclick="peek()">Peek</button>
+            <button onclick="isEmpty()">Is Empty</button>
+        </div>
+
+        <!-- Main content for stack visualization -->
+        <div class="content">
+            <div class="stack-display" id="stack-display">
+                <!-- Stack elements will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for stack information -->
+    <div class="overlay" id="stack-overlay">
+        <h2>About Stack</h2>
+        <p><strong>Definition:</strong> A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. The element inserted last is accessed first.</p>
+        <p><strong>Operations:</strong></p>
+        <ul>
+            <li><strong>Push:</strong> Adds an element to the top of the stack.</li>
+            <li><strong>Pop:</strong> Removes and returns the top element of the stack.</li>
+            <li><strong>Peek:</strong> Returns the top element without removing it.</li>
+            <li><strong>Is Empty:</strong> Checks if the stack has no elements.</li>
+        </ul>
+        <p><strong>Time Complexity:</strong></p>
+        <ul>
+            <li>Push: O(1)</li>
+            <li>Pop: O(1)</li>
+            <li>Peek: O(1)</li>
+            <li>Is Empty: O(1)</li>
+        </ul>
+        <button onclick="closeOverlay()">Close</button>
+    </div>
+
+    <script src="js/stack.js"></script>
+</body>
+</html>

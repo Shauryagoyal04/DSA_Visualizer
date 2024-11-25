@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Visualizer</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script>
+    function openAbout() {
+      document.getElementById("aboutOverlay").style.display = "flex";
+    }
+
+    function closeAbout() {
+      document.getElementById("aboutOverlay").style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">DSA Visualizer</h1>
+      <ul class="nav-links">
+        <li><button onclick="openAbout()" class="btn">About</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Explore Data Structures Visually</h1>
+    <p>Learn, Visualize, and Understand core Data Structures through animations and examples.</p>
+  </header>
+
+  <!-- Cards Section -->
+  <section class="cards">
+    <div class="card" id="linkedlist">
+      <h2>Linked List</h2>
+      <p>Visualize how nodes are connected and traversed in a Linked List.</p>
+      <a href="linkedlist.html" class="btn">Explore</a>
+    </div>
+    <div class="card" id="stacks">
+      <h2>Stacks</h2>
+      <p>Understand the Last In First Out (LIFO) principle with animations.</p>
+      <a href="stack.html" class="btn">Explore</a>
+    </div>
+    <div class="card" id="queues">
+      <h2>Queues</h2>
+      <p>Visualize the First In First Out (FIFO) behavior of Queues.</p>
+      <a href="queue.html" class="btn">Explore</a>
+    </div>
+    <div class="card" id="trees">
+      <h2>Sorting</h2>
+      <p>Learn Bubble Sort,Quick Sort,Selection Sort.</p>
+      <a href="Sorting.html" class="btn">Explore</a>
+    </div>
+  </section>
+
+  <!-- About Overlay -->
+  <div id="aboutOverlay" class="overlay">
+    <div class="overlay-content">
+      <h2>About DSA Visualizer</h2>
+      <p>This project is designed to help learners understand and visualize data structures and algorithms with animations and interactive features.</p>
+      <p>Explore various structures like Linked Lists, Stacks, Queues, and Merge Sort in an intuitive way.</p><br><br>
+      <button onclick="closeAbout()" class="btn close-btn">Close</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; Shaurya,Harsh,Shreshtha,Sarthak.</p>
+  </footer>
+</body>
+</html>

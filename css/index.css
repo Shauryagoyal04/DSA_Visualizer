@@ -1,0 +1,177 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #DBD3D3; /* Light neutral background */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #024CAA; /* Dark blue background */
+  color: #DBD3D3; /* Light text */
+  padding: 1rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #DBD3D3; /* Light text */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #EC8305; /* Bright orange for hover effect */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #007bff, #024CAA); /* Blue gradient */
+  color: #DBD3D3; /* Light text */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.card {
+  background-color: #DBD3D3; /* Light neutral background for cards */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #024CAA; /* Blue for card headings */
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #EC8305; /* Bright orange for buttons */
+  color: #DBD3D3; /* Light text */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card .btn:hover {
+  background-color: #024CAA; /* Dark blue for hover effect */
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #024CAA; /* Blue background */
+  color: #DBD3D3; /* Light text */
+}
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+.overlay-content {
+  
+  border-radius: 10px;
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+}
+.overlay h2 {
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.btn {
+  background: #024CAA; /* Matching palette */
+  color: #DBD3D3; /* Matching palette */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #EC8305; /* Matching palette */
+}
+
+.close-btn {
+  background: #EC8305; /* Close button highlight */
+}

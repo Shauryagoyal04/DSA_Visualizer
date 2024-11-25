@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedList Data Structure</title>
+    <link rel="stylesheet" href="css/ll.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>LinkedList Data Structure</div>
+        <button onclick="openOverlay()">About LinkedList</button>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <div class="sidebar">
+            <input type="number" id="value" placeholder="Enter value">
+            <input type="number" id="position" placeholder="Enter position (optional)">
+            <button onclick="insertAtTop()">Insert at Top</button>
+            <button onclick="insertAtBottom()">Insert at Bottom</button>
+            <button onclick="insertAtK()">Insert at Position</button>
+            <button onclick="deleteNode()">Delete Node</button>
+            <button onclick="searchNode()">Search Node</button>
+        </div>
+
+        <div class="content">
+            <div class="linkedlist-display" id="linkedlist-display">
+                <!-- Nodes will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About LinkedList -->
+    <div class="overlay" id="linkedlist-overlay">
+        <h2>About LinkedList</h2>
+        <p>A LinkedList is a sequential collection of nodes where each node contains data and a pointer to the next node.</p>
+        <p><strong>Advantages:</strong> Dynamic size, efficient insertion/deletion.</p>
+        <p><strong>Time Complexity:</strong></p>
+        <ul>
+            <li>Insert: O(1) at head/tail, O(n) at arbitrary position</li>
+            <li>Search: O(n)</li>
+            <li>Delete: O(1) (if pointer is known), O(n) (search first)</li>
+        </ul>
+        <button onclick="closeOverlay()">Close</button>
+    </div>
+
+    <script src="js/ll.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.about-btn {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar input, .sidebar button {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.sidebar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ecef;
+    padding: 20px;
+}
+
+.stage {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: 600px;
+    background: #4eb9fb;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: flex-end;
+  }
+  
+  .bar {
+    position: absolute;
+    height: 100px;
+    background: #fff;
+    transition: all 300ms ease-out;
+    border-radius: 6px;
+  }
+  
+  .bar.activate {
+    background: #65d84e;
+    transition-property: 0.3s;
+    animation: upAndDownScale 1.5s ease-in-out;
+  }
+  
+  @keyframes upAndDownScale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+/* Overlay for queue information */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.overlay h2 {
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.overlay button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #0056b3;
+}
+.select-algorithm {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .select-algorithm select {
+    background: #0563af;
+    color: #fff;
+    padding: 2px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .select-algorithm select option {
+    padding: 30px;
+  }
+  .generate-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #007bff;
+    padding: 10px;
+    gap: 10px; /* Adds spacing between child elements */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* Optional background for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    width: 200px; /* Fixed width for consistency */
+    margin: 20px auto; /* Centers the div horizontally */
+}
+
+.generate-new input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center; /* Centers the number inside the input */
+}
+
+.generate-new button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease; /* Adds a hover effect */
+}
+
+.generate-new button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  button {
+    background: #ea4c89;
+    border-radius: 8px;
+    border-style: none;
+    color: #FFF;
+    cursor: pointer;
+    padding: 5px 16px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background: #4eb9fb;
+  }
+  
+/* .array-bar {
+    width: 30px;
+    background-color: #3498db;
+    margin: 0 2px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.highlight {
+    background-color: #e74c3c; Highlighted in red */
+

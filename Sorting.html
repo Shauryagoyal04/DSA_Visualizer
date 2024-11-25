@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sort Visualizer</title>
+    <link rel="stylesheet" href="css/Sorting.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        Sorting 
+        <button class="about-btn" onclick="openOverlay()">About Merge Sort</button>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar for controls -->
+        <div class="sidebar">
+            <select name="" id="selectAlgorithm" class="select-algorithm">
+                <option value="bubbleSort" selected>Bubble Sort</option>
+                <option value="selectionSort">Selection Sort</option>
+                <option value="quickSort">Quick Sort</option>
+            </select>
+            <div class="generate-new">
+                <h4>Generate New Array</h4>
+                <input type="number" name="sizeArray" id="numbersBars" max="25" min="1" value="20">
+                <button id="generateBtn">New</button>
+            </div>
+            <div class="buttons">
+                <button id="solveBtn">Solve</button>
+            </div>
+        </div>
+
+        <!-- Main content for visualization -->
+        <div class="content">
+            <div class="stage" id="stage"></div>
+        </div>
+    </div>
+
+    <!-- Overlay for About Merge Sort -->
+    <div class="overlay" id="merge-sort-overlay">
+        
+        <h2>About Sorting Algorithms</h2>
+
+        <!-- Bubble Sort -->
+        <h4>Bubble Sort</h4>
+        <p>Bubble Sort is a simple comparison-based sorting algorithm. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted.</p>
+        <p><strong>Time Complexity:</strong> O(n<sup>2</sup>) (average and worst case), O(n) (best case when the array is already sorted).</p>
+        <p><strong>Space Complexity:</strong> O(1) (in-place sorting).</p>
+        
+        <!-- Quick Sort -->
+        <h4>Quick Sort</h4>
+        <p>Quick Sort is a divide-and-conquer algorithm. It selects a 'pivot' element, partitions the array into two halves (elements less than the pivot and elements greater than the pivot), and recursively sorts the partitions.</p>
+        <p><strong>Time Complexity:</strong> O(n log n) (average case), O(n<sup>2</sup>) (worst case with poor pivot selection).</p>
+        <p><strong>Space Complexity:</strong> O(log n) (average case for recursion stack).</p>
+        
+        <!-- Selection Sort -->
+        <h4>Selection Sort</h4>
+        <p>Selection Sort divides the array into a sorted and an unsorted region. It repeatedly selects the smallest (or largest) element from the unsorted region and moves it to the sorted region.</p>
+        <p><strong>Time Complexity:</strong> O(n<sup>2</sup>) (average, worst, and best cases).</p>
+        <p><strong>Space Complexity:</strong> O(1) (in-place sorting).</p>
+        
+            <button onclick="closeOverlay()">Close</button>
+        
+    </div>
+
+    <script src="js/Sorting.js"></script>
+</body>
+</html>
