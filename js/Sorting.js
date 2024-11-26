@@ -91,6 +91,7 @@ const sleep = async (ms) => {
     }
   }
   let nBars = 20
+let speed = document.getElementById('speed');
 
 let numbersBars = document.getElementById('numbersBars')
 
@@ -138,7 +139,7 @@ async function swapBars(barsDivs, i, j) {
   barsDivs[i].classList.add('activate')
   barsDivs[j].style.left = `${5 + i * 30}px`
   barsDivs[j].classList.add('activate')
-  await sleep(300)
+  await sleep(speed.value*100)
   barsDivs[i].classList.remove('activate')
   barsDivs[j].classList.remove('activate')
   let temp = barsDivs[i]
